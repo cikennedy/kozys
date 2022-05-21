@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Head from 'next/head';
 
 const Layout = () => {
   return (
-    <div>Layout</div>
+    <div className='layout'>
+      <Head>
+        <title>Kozy's</title>
+      </Head>
+    </div>
   )
 }
 
