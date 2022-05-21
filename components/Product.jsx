@@ -3,8 +3,6 @@ import Link from 'next/link';
 
 import { urlFor } from '../lib/client';
 
-// TO-DO: 
-// ADD PRODUCTS IN SANITY DESK
 const Product = ({ product: { image, name, slug, price } }) => {
   return (
     <div>
