@@ -13,6 +13,11 @@ const ProductDetails = ({ product, products }) => {
           <div className="image-container">
             <img src={urlFor(image && image[0])} />
           </div>
+          <div className="small-images-container">
+            {image?.map((item, i) => (
+              <img src={urlFor(item)} className="" onMouseEnter="" />
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +48,7 @@ export const getStaticPaths = async () => {
 };
 
 // getStaticProps is a next.js function that will pre-render a page at build time
-// use if data comes from a headless CMS, can be publicly cahced (not user-specific)
+// use if data comes from a headless CMS, can be publicly cached (not user-specific)
 // getStaticProps generates HTML and JSON files, both can be cached by a CDN for performance
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
