@@ -19,6 +19,7 @@ const ProductDetails = ({ product, products }) => {
       <div className="product-detail-container">
         <div>
           <div className="image-container">
+            {/* TO-DO: STYLE IMAGES */}
             <img src={urlFor(image && image[0])} />
           </div>
           <div className="small-images-container">
