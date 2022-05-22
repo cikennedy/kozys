@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 
 import { client, urlFor } from "../../lib/client";
+import { Product } from "../../components";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -62,6 +63,16 @@ const ProductDetails = ({ product, products }) => {
             <button type="button" className="buy-now" onClick="">
               Buy Now
             </button>
+          </div>
+        </div>
+      </div>
+      <div className="maylike-products-wrapper">
+        <h2>You may also like</h2>
+        <div className="marquee">
+          <div className="maylike-products-container">
+            {products.map((item) => (
+              <Product key={item._id} product={item} />
+            ))}
           </div>
         </div>
       </div>
