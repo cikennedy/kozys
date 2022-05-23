@@ -57,6 +57,9 @@ const Cart = () => {
                     </span>
                   </p>
                   </div>
+                  <button type='button' className='remove-item' onClick=''>
+                    <TiDeleteOuline />
+                  </button>
                 </div>
               </div>
             </div>
