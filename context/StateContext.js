@@ -47,7 +47,11 @@ export const StateContext = ({ children }) => {
     foundProduct = cartItems.find((item) => item._id === id);
     index = cartItems.find((product) => product._id === id);
 
-    const newCartItems = cartItems.splice(index, 1);
+    // splice method is a mutative method, which means it updates the state
+    // better to use a filter which will not mutate the state
+    // const newCartItems = cartItems.splice(index, 1);
+    // this will filter out only the item that possess the id
+    const newCartItems = cartItems.filter((item) => item._id !== id);
 
     if (value === "inc") {
       setCartItems([
