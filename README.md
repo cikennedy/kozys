@@ -10,4 +10,6 @@ E-commerce site revamp for a local business in my area.
 - "customers also bought..." section
 
 - SHOPPING CART PAGE
-- dyanmic shopping cart
+- styling for prices, totals
+- subtotal bug when adding/removing items
+- add functionality for completely deleting items from cart
