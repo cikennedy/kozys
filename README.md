@@ -17,3 +17,4 @@ E-commerce site revamp for a local business in my area.
 
 - STRIPE FUNCTIONALITY
 - implement stripe payment system
+- go through all stripe documentation!
