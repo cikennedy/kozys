@@ -14,3 +14,6 @@ E-commerce site revamp for a local business in my area.
 - total prices incorrect
 - subtotal bug when incrementing/decrementing items
 - bug where most recently updated item changes order in cart
+
+- STRIPE FUNCTIONALITY
+- implement stripe payment system
