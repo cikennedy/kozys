@@ -43,7 +43,18 @@ export const StateContext = ({ children }) => {
     toast.success(`${qty} ${product.name} added to cart`);
   };
 
-  const onRemove = () => {};
+  const onRemove = (product) => {
+    foundProduct = cartItems.find((item) => item._id === id);
+    const newCartItems = cartItems.filter((item) => item._id !== id);
+
+    setTotalPrice(
+      (prevTotalPrice) =>
+        prevTotalPrice - foundProduct.price * foundProduct.quantity
+    );
+    setTotalQuantities(
+      (prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity
+    );
+  };
 
   const toggleCartItemQuantity = (id, value) => {
     foundProduct = cartItems.find((item) => item._id === id);
