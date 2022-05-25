@@ -13,3 +13,4 @@ E-commerce site revamp for a local business in my area.
 - styling for prices, totals
 - subtotal bug when adding/removing items
 - add functionality for completely deleting items from cart
+- bug where most recently updated item changes order in cart
