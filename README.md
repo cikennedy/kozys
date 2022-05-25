@@ -11,6 +11,6 @@ E-commerce site revamp for a local business in my area.
 
 - SHOPPING CART PAGE
 - styling for prices, totals
-- subtotal bug when adding/removing items
-- add functionality for completely deleting items from cart
+- total prices incorrect
+- subtotal bug when incrementing/decrementing items
 - bug where most recently updated item changes order in cart
