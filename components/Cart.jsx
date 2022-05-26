@@ -6,23 +6,25 @@ import toast from 'react-hot-toast';
 
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
-import { getStripe } from '../lib/getStripe';
+import getStripe from '../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
+
   const handleCheckout = async () => {
     const stripe = await getStripe();
 
     // api request to our own next.js application
-    const response = await fetch('/api/stripe', { 
+    const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(cartItems) ,
+      body: JSON.stringify(cartItems),
     });
+  
 
     if(response.statusCode === 500) return;
 
