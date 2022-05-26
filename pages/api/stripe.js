@@ -1,8 +1,9 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+import Stripe from "stripe";
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    console.log(req.body.cartItems);
     try {
       const params = {
         submit_type: "pay",
@@ -13,7 +14,7 @@ export default async function handler(req, res) {
           { shipping_rate: "shr_1L3Rc7IbYgnk3qKMrzAmR1vm" },
           { shipping_rate: "shr_1L3RdJIbYgnk3qKM1DfUqqUF" },
         ],
-        line_items: req.body.cartItems.map((item) => {
+        line_items: req.body.map((item) => {
           const img = item.image[0].asset._ref;
           const newImage = img
             .replace(
