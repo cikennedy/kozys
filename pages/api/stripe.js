@@ -13,13 +13,16 @@ export default async function handler(req, res) {
           { shipping_rate: "shr_1L3Rc7IbYgnk3qKMrzAmR1vm" },
           { shipping_rate: "shr_1L3RdJIbYgnk3qKM1DfUqqUF" },
         ],
-        line_items: [
-          {
-            // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-            price: "{{PRICE_ID}}",
-            quantity: 1,
-          },
-        ],
+        line_items: req.body.cartItems.map((item) => {
+          const img = item.image[0].asset._ref;
+          const newImage = img
+            .replace(
+              "image-",
+              "https://cdn.sanity.io/images/0jeoe4yo/production/"
+            )
+            // replace -jpg, jpeg, png, etc. with .jpg, .jpeg, .png, .etc
+            .replace("-webp", ".webp");
+        }),
         mode: "payment",
         success_url: `${req.headers.origin}/?success=true`,
         cancel_url: `${req.headers.origin}/?canceled=true`,
