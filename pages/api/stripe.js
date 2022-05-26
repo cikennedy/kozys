@@ -22,6 +22,22 @@ export default async function handler(req, res) {
             )
             // replace -jpg, jpeg, png, etc. with .jpg, .jpeg, .png, .etc
             .replace("-webp", ".webp");
+
+          return {
+            price_data: {
+              currency: "usd",
+              product_data: {
+                name: item.name,
+                images: [newImage],
+              },
+              unit_amount: item.price * 100,
+            },
+            adjustable_quantity: {
+              enabled: true,
+              minimum: 1,
+            },
+            quantity: item.quantity,
+          };
         }),
         mode: "payment",
         success_url: `${req.headers.origin}/?success=true`,
