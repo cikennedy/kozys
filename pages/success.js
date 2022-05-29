@@ -14,6 +14,7 @@ const Success = () => {
         <p className="icon">
           <BsBagCheckFill />
         </p>
+        <h2>Thank you for your order!</h2>
       </div>
     </div>
   );
