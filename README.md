@@ -18,3 +18,11 @@ E-commerce site revamp for a local business in my area.
 - STRIPE FUNCTIONALITY
 - implement stripe payment system
 - go through all stripe documentation!
+
+- STYLING
+- Change design, accommodate the store to kozy's
+
+- ABOUT, CONTACT
+- update footer with site map
+- create about page with story, pull from web
+- update everything via next and routing
