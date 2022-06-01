@@ -11,10 +11,10 @@ const Navbar = () => {
   return (
     <div className='navbar-container'>
       <p className='logo'>
-        <Link href='/'>Kozy's</Link>
+        <Link href='/'>Kozy's Cyclery</Link>
       </p>
-      <p className='logo'>
-        <Link href='/about'>About</Link>
+      <p className='navbar-item'>
+        <Link href='/about'>About Us</Link>
       </p>
 
       <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>

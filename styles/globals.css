@@ -65,7 +65,12 @@ width: 100%;
     margin-left: 6px;
 }
 .logo{
-  color: gray;
+  color: #324d67;
+  font-size: 18px;
+
+}
+.navbar-item{
+  color: #324d67;
   font-size: 18px;
 
 }
