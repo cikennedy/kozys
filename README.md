@@ -27,3 +27,8 @@ E-commerce site revamp for a local business in my area.
 - update footer with site map
 - create about page with story, pull from web
 - update everything via next and routing
+
+- AUTH
+- account
+
+- SEARCH FEATURE

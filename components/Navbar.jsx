@@ -16,6 +16,9 @@ const Navbar = () => {
       <p className='navbar-item'>
         <Link href='/about'>About Us</Link>
       </p>
+      <p className='navbar-item'>
+        <Link href='/about'>Locations</Link>
+      </p>
 
       <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
