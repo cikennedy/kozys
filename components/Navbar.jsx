@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { AiOutlineShopping } from 'react-icons/ai';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 import { Cart } from './';
 
@@ -17,7 +18,14 @@ const Navbar = () => {
         <Link href='/about'>About Us</Link>
       </p>
       <p className='navbar-item'>
-        <Link href='/about'>Locations</Link>
+        <Link href='/locations'>Locations</Link>
+      </p>
+      <p className='navbar-search'>
+        Search...
+        <Link href='/'>
+          <AiOutlineSearch />
+        </Link>
+
       </p>
 
       <button type='button' className='cart-icon' onClick={() => setShowCart(true)}>
